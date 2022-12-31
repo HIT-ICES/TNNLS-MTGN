@@ -1,0 +1,6 @@
+_target_: src.datamodules.lsed_datamodule.LSED_datamodule
+
+data_dir: ${data_dir}
+num_workers: 4
+pin_memory: True
+snapshot: False

@@ -1,0 +1,8 @@
+_target_: src.datamodules.uci_datamodule.UCI_datamodule
+
+# 1899 nodes
+data_dir: ${data_dir}
+num_workers: 4
+pin_memory: True
+missing_event_ratio: 0.0 
+snapshot: False

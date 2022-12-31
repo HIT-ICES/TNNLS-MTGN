@@ -1,0 +1,7 @@
+_target_: src.datamodules.rt_datamodule.RT_datamodule
+
+data_dir: ${data_dir}
+num_workers: 4
+pin_memory: False
+missing_event_ratio: 0.0 
+snapshot: False

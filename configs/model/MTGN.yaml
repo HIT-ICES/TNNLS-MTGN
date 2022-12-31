@@ -1,0 +1,12 @@
+_target_: src.models.MTGN.MTGN
+
+num_nodes: 151
+embed_size: 64
+num_gcn_layers: 2
+num_mixture_components: 16
+missing_mum: 1  
+missing_component: True
+undirected: False
+missing_stru: "hypo1"
+sample_among_shown_entity: [True, False]
+lr: 0.00002

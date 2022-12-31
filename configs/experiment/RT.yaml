@@ -1,0 +1,33 @@
+# @package _global_
+
+# to execute this experiment run:
+# python run.py experiment=example_simple.yaml
+
+defaults:
+  - override /trainer: default.yaml # choose trainer from 'configs/trainer/'
+  - override /model: MTGN.yaml
+  - override /datamodule: rt.yaml
+  - override /callbacks: null
+  - override /logger: wandb.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+seed: 12345
+
+trainer:
+  max_epochs: 150
+  gradient_clip_val: 0.5
+
+model:
+  num_nodes: 18470
+  embed_size: 64
+  num_gcn_layers: 2
+  num_mixture_components: 16
+  missing_mum: 1  
+  lr: 0.00002
+
+logger:
+  wandb:
+    project: "TNNLS"
+    name: "MTGN-RT"
